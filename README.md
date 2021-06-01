@@ -52,6 +52,8 @@ ninja -C out/mac_arm64 mac_framework_objc && \
 lipo -create out/mac_x64/WebRTC.framework/WebRTC out/mac_arm64/WebRTC.framework/WebRTC -output out/WebRTC-mac-fat
 ```
 
+Note: since the stripped version is a little bit old, which doesn't support build for macOS arm64, so macOS uses a different version, so to macOS version after iOS/tvOS version, or vice-versa, you need to checkout branch and run `gclient sync` again.
+
 ## Create xcframework
 
 In directory `src`, run:
